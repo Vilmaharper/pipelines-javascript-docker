@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: vilmaharperpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vilmaharperpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: vilmaharperpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: vilmaharperpipelinesjavascriptdocker 
+          image: myregistrycontainer212.azurecr.io/vilmaharperpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
